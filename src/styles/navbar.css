@@ -1,0 +1,36 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 72px;
+    background: var(--white);
+    border-bottom: 1.5px solid var(--paper-dark);
+}
+
+.logo {
+    font-family: 'General Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--ink);
+    font-weight: 500;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    font-size: 16px;
+}
+
+.nav-links a {
+    color: var(--muted);
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}

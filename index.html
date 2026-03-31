@@ -4,10 +4,35 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/styles/main.css">
+    <link rel="stylesheet" href="/src/styles/navbar.css">
+    <script type="module" src="/src/main.js"></script>
     <title>StudyNook</title>
+    
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+
+
+    <div class="landing-hero">
+      <p class="landing-top">🎓 For students, by students</p>
+      <h1 class="landing-headline">Find your perfect<br><em>study spot</em></h1>
+      <p class="landing-subline">Discover the best place to study on and around your campus - rated by students like you.</p>
+
+      <div class="search-container">
+        <div class="search-bar">
+          <input 
+            type="text"
+            id="schoolSearch" 
+            placeholder="Find your university..."
+          />
+            <button type="button" id="searchBtn">Search</button>
+        </div>
+        <div class="search-dropdown"></div>
+      </div>
+    </div>
+
+
+
+  
   </body>
 </html>
