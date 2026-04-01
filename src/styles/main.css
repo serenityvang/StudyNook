@@ -138,3 +138,53 @@ img {
     color: var(--ink);
 }
 
+.schools-section {
+    padding: 24px 0 32px;
+    margin-top: 48px;
+    border-top: 1.5px solid var(--paper-dark);
+    background: var(--paper);
+}
+
+.schools-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+    margin-bottom: 14px;
+}
+
+.schools-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.carousel-arrows {
+    display: flex;
+    gap: 6px;
+}
+
+.arrow-btn {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1.5px solid var(--border);
+    background: var(--white);
+    color: var(--ink);
+    font-size: 13px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s;
+}
+
+.school-row{
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 4px 32px 8px 48px;
+    
+}
