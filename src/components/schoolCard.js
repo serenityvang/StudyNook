@@ -46,3 +46,18 @@ export function SchoolCard(campus){
 
   return card
 }
+
+export function createAddCard() {
+    const card = document.createElement("div");
+    card.className = "school-card-add";
+
+    const icon = document.createElement("span");
+    icon.textContent = "➕";
+
+    const text = document.createElement("span");
+    text.textContent = "Add your campus";
+
+    card.append(icon, text);
+
+    return card;
+}

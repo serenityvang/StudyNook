@@ -1,6 +1,6 @@
 import { supabase } from '../lib/supabase.js'
 import { Navbar } from '../components/navbar.js'
-import { SchoolCard } from '../components/schoolCard.js'
+import { SchoolCard, createAddCard } from '../components/schoolCard.js'
 
 // init navbar
 const navContainer = document.getElementById('navbar')
@@ -27,12 +27,18 @@ async function loadCampuses() {
     renderSchoolCards(campuses);
 }
 
+
+// creates the different school cards
 function renderSchoolCards(campuses) {
     const row = document.getElementById("schoolsRow");
 
+    row.innerHTML = "";
+    
     campuses.forEach(campus => {
         row.appendChild(SchoolCard(campus))
     });
+    row.appendChild(createAddCard());
 }
+
 
 loadCampuses()
