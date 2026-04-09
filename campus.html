@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="cards.css" />
+    <title>StudyNook - Campus</title>
+  </head>
+  <body>
+    <nav id="navbar"></nav>
+
+    <!-- campus header -->
+    <div id="campus-header">
+        <div id="breadcrumb"></div>
+        <h1 id= "campus-name"></h1>
+        <p id="campus-meta"></p>
+    </div>
+
+    <!-- filter bar -->
+    <div id="filter-bar">
+        <span class="fitler-label">Filter:</span>
+        <div id="filter-chips">
+            <button class="filter-chip active">All</button>
+            <button class="filter-chip"> Library</button>
+            <button class="filter-chip">Cafe</button>
+            <button class="filter-chip">Outdoor</button>
+            <button class="filter-chip">Common Area</button>
+        </div>
+        <div>
+            <button class="filter-chip">WiFi</button>
+            <button class="filter-chip">Outlets</button>
+            <button class="filter-chip">Quiet</button>
+        </div>
+    </div>
+
+     <!-- spot cards grid -->
+      <div id="spots-grid">
+
+      </div>
+
+     <!-- suggest a spot banner -->
+
+     <div>
+        <div>
+            <strong>Can't find your spot?</strong>
+            <p>Know a hidden gem? Submit it for review.</p>
+        </div>
+        <a href="/suggest.html" class="btn btn-outline">Add a spot →</a>
+     </div>
+
+     <script type="module" src="/src/pages/campus.js"></script>
+  </body>
+</html>
