@@ -33,7 +33,7 @@ function renderSchoolCards(campuses) {
     const row = document.getElementById("schoolsRow");
 
     row.innerHTML = "";
-    
+
     campuses.forEach(campus => {
         row.appendChild(SchoolCard(campus))
     });
