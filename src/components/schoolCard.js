@@ -2,7 +2,7 @@ export function SchoolCard(campus){
     const card = document.createElement("div");
     card.className = "school-card";
     card.addEventListener("click", () => {
-        window.location.href = `/campus.html?school=${campus.slug}`
+        window.location.href = `?school=${campus.slug}`;
     })
 
     const top = document.createElement("div");
