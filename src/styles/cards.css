@@ -1,0 +1,39 @@
+.filter-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: var(--white);
+    border-bottom: 1.5px solid var(--paper-dark);
+    overflow-x: auto;
+    flex-wrap: wrap;
+}
+
+.filter-label {
+    font-family: 'General Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--muted);
+    margin-left: 4px;
+}
+
+.filter-chip {
+    font-family: 'General Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 5px 12px;
+    border-radius: var(--radius-full);
+    border: 1.5px solid var(--border);
+    background: var(--white);
+    color: var(--ink);
+    transition: all 0.15s;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.filter-chip.active {
+    background: var(--accent);
+    color: var(--white);
+    border-color: var(--accent);
+}
+
