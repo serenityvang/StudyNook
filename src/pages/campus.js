@@ -17,7 +17,7 @@ if(!slug) {
 }
 
 if(!/^[a-z0-9-]+$/.test(slug)) {
-    window.location.href = 'index.html';
+    window.location.href = '/index.html';
 }
 
 let allSpots = [];
