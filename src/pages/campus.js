@@ -1,6 +1,6 @@
 import { supabase } from '../lib/supabase.js'
 import { Navbar } from '../components/navbar.js'
-// import { SpotCard } from '../components/spotCard.js'
+import { SpotCard } from '../components/spotCard.js'
 
 
 // init navbar
@@ -85,7 +85,7 @@ async function loadSpots(campusId){
 
     //show a loading message while we wait for supabase
     //only fetch aprpoved spots - pending/rejected not shown to the public
-    const grid = document.getElementById("spots-grid");
+    const grid = document.querySelector(".spots-grid");
     const loadingEl = document.createElement("p");
     loadingEl.className = "loading-message";
     loadingEl.id = "loading-mesage";
@@ -126,7 +126,7 @@ async function loadSpots(campusId){
 
 // Render the spots
 function renderSpots(spots) {
-    const grid = document.getElementById("spots-grid");
+    const grid = document.querySelector(".spots-grid");
 
     grid.innerHTML = "";
 
