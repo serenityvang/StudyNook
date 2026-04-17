@@ -4,6 +4,19 @@
     background: var(--paper);
 }
 
+#breadcrumb {
+    font-size: 0.9rem;
+}
+
+#breadcrumb a{
+    color: var(--muted);
+}
+
+.meta-count {
+    display: flex;
+    gap: 6px;
+    color: var(--muted);
+}
 .filter-bar {
     display: flex;
     align-items: center;
@@ -17,7 +30,7 @@
 
 .filter-label {
     font-family: 'General Sans', sans-serif;
-    font-size: 13px;
+    font-size:  13px;
     font-weight: 500;
     color: var(--muted);
     margin-left: 4px;
@@ -131,7 +144,8 @@
 }
 
 .spot-tag--quiet { 
-    background: #dbeafe; color: #1d4ed8; 
+    background: #dbeafe; 
+    color: #1d4ed8; 
 }
 .spot-tag--moderate { 
     background: #fef3c7; 
@@ -182,5 +196,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
-    padding: 20px;
+    padding: 20px 24px;
+    max-width: 1400px;
+    margin: 0 auto;
 }

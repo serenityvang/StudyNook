@@ -6,17 +6,21 @@
     <link rel="stylesheet" href="/src/styles/main.css" />
     <link rel="stylesheet" href="/src/styles/navbar.css" />
     <link rel="stylesheet" href="/src/styles/cards.css" />
+    <link rel="preconnecet" href="https://api.fontshare.com/v2/css?f[]=gambetta@400&f[]=general-sans@600&display=swap" rel="stylesheet" crossorigin>
     <title>StudyNook - Campus</title>
   </head>
   <body>
     <nav id="navbar"></nav>
 
     <!-- campus header -->
-    <div id="campus-header">
+    <div class="campus-header">
         <div id="breadcrumb"></div>
         <h1 id= "campus-name"></h1>
-        <p id="campus-meta"></p>
-        <p id="campus-count"></p>
+        <div class="meta-count">
+            <p id="campus-count"></p>
+            <span>&#8226;</span>
+            <p id="campus-meta"></p>
+        </div>
     </div>
 
     <!-- filter bar -->

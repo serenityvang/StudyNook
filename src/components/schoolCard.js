@@ -1,4 +1,4 @@
-export function SchoolCard(campus){
+export function SchoolCard(campus, spotCount){
     const card = document.createElement("div");
     card.className = "school-card";
     card.addEventListener("click", () => {
@@ -11,7 +11,7 @@ export function SchoolCard(campus){
     const spotsEl = document.createElement("span");
     spotsEl.className = "school-spots";
     spotsEl.id = `spots-${campus.id}`;
-    spotsEl.textContent = "- spots";
+    spotsEl.textContent = `${spotCount} spots`;
 
     const nameEl = document.createElement("div");
     nameEl.className = "school-name";
