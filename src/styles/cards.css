@@ -1,7 +1,21 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
 .campus-header {
     padding: 20px 24px 16px;
     border-bottom: 1.5px solid var(--paper-dark);
     background: var(--paper);
+}
+
+#campus-name {
+    font-weight: 500;
 }
 
 #breadcrumb {
@@ -199,4 +213,41 @@
     padding: 20px 24px;
     max-width: 1400px;
     margin: 0 auto;
+}
+
+.spots-empty, .error-message, .loading-message {
+    font-size: 14px;
+    color: var(--muted);
+    text-align: center;
+    padding: 48px 24px;
+    grid-column: 1 / -1;
+}
+
+.suggest-container {
+    background-color: var(--white);
+    padding-bottom: 20px;
+    padding-top: 10px;
+    margin-top: auto;
+}
+
+.suggest-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--white);
+    border: 1.5px dotted var(--border);
+    border-radius: 12px;
+    padding: 16px 20px;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    width: calc(100% - 48px);
+}
+
+.suggest-banner-text {
+    font-size: 15px;
+}
+
+.suggest-banner-text strong{
+    font-style: italic;
 }
