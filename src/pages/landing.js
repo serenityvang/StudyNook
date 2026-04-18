@@ -65,4 +65,23 @@ function renderSchoolCards(campuses, spotCounts) {
 }
 
 
+const leftBtn = document.getElementById("arrowLeft");
+const rightBtn = document.getElementById("arrowRight");
+const schoolsRow = document.querySelector(".schools-row");
+
+leftBtn.addEventListener("click", () =>{
+    schoolsRow.scrollBy({
+        left: -300,
+        behavior: "smooth"
+    });
+});
+
+rightBtn.addEventListener("click", () => {
+    schoolsRow.scrollBy({
+        left: 300,
+        behavior:"smooth"
+    });
+});
+
+
 loadCampuses()
