@@ -119,6 +119,7 @@ img {
     width: 100%;
     max-width: 500px;
     margin: 0 auto;
+    position: relative;
 }
 
 .search-bar {
@@ -140,6 +141,24 @@ img {
     font-size: 15px;
     background: transparent;
     color: var(--ink);
+}
+
+.search-dropdown {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+    background: var(--white);
+    border: 1px solid var(--muted);
+    border-radius: 12px;
+    display: none;
+    z-index: 20;
+    overflow: hidden;
+}
+
+.search-item {
+    display: block;
+    padding: 10px;
 }
 
 .schools-section {

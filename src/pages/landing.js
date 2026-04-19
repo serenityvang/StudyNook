@@ -48,6 +48,7 @@ async function loadCampuses() {
     const spotCounts = await loadSpotCounts();
 
     renderSchoolCards(campuses, spotCounts);
+    setSchoolSearch(campuses);
 }
 
 
@@ -62,6 +63,75 @@ function renderSchoolCards(campuses, spotCounts) {
         row.appendChild(SchoolCard(campus, count))
     });
     row.appendChild(createAddCard());
+}
+
+
+function renderSearchDropdown(matches, dropdown){
+
+    dropdown.innerHTML = "";
+    if(!matches.length){
+        dropdown.style.display = "none";
+        return;
+    }
+
+    matches.forEach((campus) => {
+        const item = document.createElement("a");
+        item.className = ("search-item");
+        item.href = `/campus.html?school=${campus.slug}`;
+        item.textContent = campus.name;
+
+        dropdown.appendChild(item);
+    });
+
+    dropdown.style.display = "block";
+}
+
+function setSchoolSearch(campuses) {
+    const input = document.getElementById("schoolSearch");
+    const dropdown = document.getElementById("searchDropdown");
+    const button = document.querySelector(".search-bar button");
+
+
+
+    function runSearch() {
+        const query = input.value.toLowerCase().trim();
+
+        if(!query){
+            return;
+        }
+
+        const matches = campuses.filter((campus) => campus.name.toLowerCase().includes(query));
+
+        if(matches.length > 0){
+            window.location.href = `/campus.html?school=${matches[0].slug}`;
+        }
+    }
+    
+    
+    input.addEventListener("input", () => {
+        const query = input.value.toLowerCase().trim();
+
+        if(!query) {
+            dropdown.style.display = "none";
+            dropdown.innerHTML = "";
+            return;
+        }
+
+        const matches = campuses.filter((campus) => campus.name.toLowerCase().includes(query));
+
+        renderSearchDropdown(matches, dropdown);
+    })
+
+    button.addEventListener("click", () => {
+        runSearch();
+    });
+
+    input.addEventListener("keydown", (e) => {
+        if(e.key === "Enter") {
+            e.preventDefault();
+            runSearch();
+        }
+    });
 }
 
 
