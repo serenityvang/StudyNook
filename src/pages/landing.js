@@ -62,6 +62,7 @@ function renderSchoolCards(campuses, spotCounts) {
         const count = spotCounts[campus.id] || 0;
         row.appendChild(SchoolCard(campus, count))
     });
+    
     row.appendChild(createAddCard());
 }
 

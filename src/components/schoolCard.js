@@ -34,6 +34,10 @@ export function createAddCard() {
     const card = document.createElement("div");
     card.className = "school-card-add";
 
+    card.addEventListener("click", () => {
+        window.location.href = "/request-campus.html";
+    });
+
     const icon = document.createElement("span");
     icon.textContent = "➕";
 

@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="/src/styles/main.css" />
     <link rel="stylesheet" href="/src/styles/navbar.css" />
     <link rel="stylesheet" href="/src/styles/cards.css" />
-    <link rel="preconnecet" href="https://api.fontshare.com/v2/css?f[]=gambetta@400&f[]=general-sans@600&display=swap" rel="stylesheet" crossorigin>
+    <link rel="preconnect" href="https://fontshare.com" crossorigin>
+    <link href="https://api.fontshare.com/v2/css?f[]=gambetta@400&f[]=general-sans@600&display=swap" rel="stylesheet">
     <title>StudyNook - Campus</title>
   </head>
   <body>
@@ -27,17 +28,19 @@
     <div class="filter-bar">
         <span class="filter-label">Filter:</span>
         <div class="filter-chips">
-            <button class="filter-chip active">All</button>
-            <button class="filter-chip"> Library</button>
-            <button class="filter-chip">Cafe</button>
-            <button class="filter-chip">Outdoor</button>
-            <button class="filter-chip">Common Area</button>
+            <button class="filter-chip active" data-filter="all">All</button>
+            <button class="filter-chip" data-filter="library"> Library</button>
+            <button class="filter-chip" data-filter="cafe">Cafe</button>
+            <button class="filter-chip" data-filter="outdoor">Outdoor</button>
+            <button class="filter-chip" data-filter="common_area">Common Area</button>
         </div>
         <span class="divider">|</span>
         <div>
-            <button class="filter-chip">WiFi</button>
-            <button class="filter-chip">Outlets</button>
-            <button class="filter-chip">Quiet</button>
+            <button class="filter-chip" data-filter="wifi">WiFi</button>
+            <button class="filter-chip" data-filter="outlets">Outlets</button>
+            <button class="filter-chip" data-filter="quiet">Quiet</button>
+            <button class="filter-chip" data-filter="moderate">Moderate</button>
+            <button class="filter-chip" data-filter="lively">Lively</button>
         </div>
     </div>
 

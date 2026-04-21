@@ -20,15 +20,6 @@ if(!/^[a-z0-9-]+$/.test(slug)) {
     window.location.href = '/index.html';
 }
 
-let allSpots = [];
-
-let activeFilters = {
-    type: "all",
-    wifi: false,
-    outlets: false,
-    noise: null
-}
-
 // load campuses
 async function loadCampus() {
 
@@ -80,7 +71,6 @@ async function loadCampus() {
 
 
 // load spots for campuses
-
 async function loadSpots(campusId){
 
     //show a loading message while we wait for supabase
@@ -153,6 +143,15 @@ function updateSpotCount(count) {
     countEl.textContent = `${count} spot${count !== 1 ? "s" : ""}`;
 }
 
+let allSpots = []; // local memory for spots
+
+let activeFilters = {
+    type: "all",
+    wifi: false,
+    outlets: false,
+    noise: null
+}
+
 // Filter logic
 function filterSpots() {
     let filtered = [...allSpots];
@@ -188,15 +187,18 @@ const chips = document.querySelectorAll(".filter-chip");
 
 chips.forEach(chip => {
     chip.addEventListener("click", () => {
-        const filter = chip.dataset.filter;
+        const filter = chip.dataset.filter; // data-filter in html 
 
         // handle type filters
         if(["all", "library", "cafe", "outdoor", "common_area",]. includes(filter)){
-            document.querySelectorAll(".filter-chips . filter-chip").forEach(c => c.classList.remove("active"));
+            document.querySelectorAll(".filter-chips .filter-chip[data-filter]").forEach(c => {
+                if(["all", "library", "cafe", "outdoor", "common_area"].includes(c.dataset.filter)){
+                        c.classList.remove("active");
+                    }
+                });
             chip.classList.add("active");
             activeFilters.type = filter;
         }
-
         // handle wifi toggle
         if(filter === "wifi"){
             activeFilters.wifi = !activeFilters.wifi;
@@ -206,15 +208,21 @@ chips.forEach(chip => {
         // handle outlet toggle
         if(filter === "outlets"){
             activeFilters.outlets = !activeFilters.outlets;
+            chip.classList.toggle("active");
         }
 
         // handle noise toggle
-        if(filter === "quiet"){
-            if(activeFilters.noise === "quiet"){
+        if(["quiet", "moderate", "lively"].includes(filter)){
+            const noiseChips = document.querySelectorAll(
+                `[data-filter="quiet"], [data-filter="moderate"], [data-filter="lively]`
+            );
+
+            if(activeFilters.noise === filter){
                 activeFilters.noise = null;
                 chip.classList.remove("active");
             } else {
-                activeFilters.noise = "quiet";
+                noiseChips.forEach( c => c.classList.remove("active"));
+                activeFilters.noise = filter;
                 chip.classList.add("active");
             }
         }

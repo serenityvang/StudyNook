@@ -154,11 +154,18 @@ img {
     display: none;
     z-index: 20;
     overflow: hidden;
+
 }
 
 .search-item {
     display: block;
     padding: 10px;
+    border: 0.1px solid var(--muted);
+}
+
+.search-item:hover {
+    background-color: var(--accent);
+    color: var(--white);
 }
 
 .schools-section {

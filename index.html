@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/src/styles/main.css" />
     <link rel="stylesheet" href="/src/styles/navbar.css" />
-    <link rel="preconnect" href="https://api.fontshare.com/v2/css?f[]=gambetta@400&f[]=general-sans@600&display=swap" rel="stylesheet" crossorigin>
+    <link rel="preconnect" href="https://fontshare.com" crossorigin>
+    <link href="https://api.fontshare.com/v2/css?f[]=gambetta@400&f[]=general-sans@600&display=swap" rel="stylesheet">
+    <link rel="import" href="component.html">
     <title>StudyNook</title>
     
   </head>
@@ -26,6 +28,7 @@
             type="text"
             id="schoolSearch" 
             placeholder="Find your university..."
+            autocomplete="off"
           
           />
             <button type="button" class="btn btn-primary">Search</button>
