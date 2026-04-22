@@ -6,7 +6,7 @@ export function SpotCard(spot) {
     const card = document.createElement("div");
     card.className = "spot-card";
     card.addEventListener("click", () => {
-        window.location.href = `/spot.html?id=${spot.id}`
+        window.location.href = `/spot.html?id=${spot.id}`;
     });
 
     // Banner top section

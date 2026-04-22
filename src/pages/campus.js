@@ -30,6 +30,8 @@ async function loadCampus() {
         .eq("slug", slug)
         .single();
 
+        document.title = `${campus.name} - Spots`;
+
     // If supabase returned an error or found no campuses
     // log the error for debugging and redirct to landing page
     if(error || !campus) {
