@@ -22,7 +22,7 @@ export function SpotCard(spot) {
         library: "📚",
         cafe: "☕️",
         outdoor: "🌿",
-        common_area: "🏛️"
+        common_area: "🏛️" 
     }
     
     bannerEmoji.textContent = emojiMap[spot.type] || "📍";

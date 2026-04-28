@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/src/styles/main.css">
     <link rel="stylesheet" href="/src/styles/navbar.css">
-    <link rel="stylesheet" href="/src//styles//cards.css">
+    <link rel="stylesheet" href="/src//styles/cards.css">
     <title>StudyNook - Spot Detail</title>
   </head>
     <body>
         <nav id="navbar"></nav>
 
         <div id="spot-hero">
-
+            <span id="spot-hero-emoji"></span>
         </div>
 
         <div class="main-content">
@@ -22,13 +22,39 @@
                 <div id="spot-rating-display"></div>
             </div>
 
-            <div class="attributes-grid"></div>
+            <div class="attributes-grid" id="attributes-grid">
+                <div class="attr-card">
+                    <div class="attr-icon">🔇</div>
+                    <div class="attr-label">Noise</div>
+                    <div class="attr-value" id="attr-noise"></div>
+                </div>
+                <div class="attr-card">
+                    <div class="attr-icon">📶</div>
+                    <div class="attr-label">WiFi</div>
+                    <div class="attr-value" id="attr-wifi"></div>
+                </div>
+                <div class="attr-card">
+                    <div class="attr-icon">🔌</div>
+                    <div class="attr-label">Outlets</div>
+                    <div class="attr-value" id="attr-outlets"></div>
+                </div>
+                <div class="attr-card">
+                    <div class="attr-icon">🕐</div>
+                    <div class="attr-label">Hours</div>
+                    <div class="attr-value" id="attr-hours"></div>
+                </div>    
+            </div>
 
-            <div class="spot-desc"></div>
+            <div class="spot-desc" id="spot-description"></div>
 
             <div class="review-section">
                 <h2 id="reviews-heading">Reviews</h2>
+                <div class="verify-prompt"></div>
+                <div class="review-form"></div>
+                <div id="reviews-list"></div>
             </div>
         </div>
+
+        <script type="module" src="src/pages/spot.js"></script>
     </body>
 </html>
