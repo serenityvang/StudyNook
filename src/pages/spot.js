@@ -54,17 +54,26 @@ function populateSpot(spot) {
         outdoor: "#dcfce7",
         common_area: "#fce7f3"
     };
-   
-    const spotBanner = document.getElementById("spot-hero");
-    spotBanner.style.backgroundColor = colorMap[spot.type] || "#f5f0e8";
 
-    const emojiMap =  {
+     const emojiMap =  {
         library: "📚",
         cafe: "☕️",
         outdoor: "🌿",
         common_area: "🏛️" 
     }
 
+    const typeLabels = {
+        library: 'Library',
+        cafe: 'Café',
+        outdoor: 'Outdoor',
+        common_area: 'Common Area'
+    }
+
+    document.getElementById("spot-type-badge").textContent = typeLabels[spot.type] || spot.type;
+   
+    const spotBanner = document.getElementById("spot-hero");
+    spotBanner.style.backgroundColor = colorMap[spot.type] || "#f5f0e8";
+   
     document.getElementById("spot-hero-emoji").textContent = emojiMap[spot.type] || "📍";
 
     //header
@@ -78,7 +87,7 @@ function populateSpot(spot) {
     document.getElementById("attr-hours").textContent = spot.hours || "Not listed"
 
     // spot description
-    document.getElementById("spot-description").textContent = spot.description;
+    document.getElementById("spot-description").textContent = spot.location_description;
 
 }
 
